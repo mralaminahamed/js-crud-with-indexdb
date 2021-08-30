@@ -1,2 +1,2 @@
-# js-crud-with-indexdb
+# Javascript CRUD Application
  Simple JS CRUD application with IndexDB
