@@ -1,0 +1,278 @@
+/*http://localhost:63342/js-crud/assets/css/app.css?_ijt=31rtlugvfv0ngaro4f31dren1o*/
+/*http://localhost:63342/js-crud/index.html?_ijt=uhfqlir65m14a62buf4dtv7o4o*/
+/*http://localhost:63342/js-crud/assets/css/app.css?_ijt=4igge18osjb0l7dtm0aorcfun3*/
+html:root {
+    --blue-deep: #0777cc;
+    --blue-deep-light: #34abe6;
+    --red: red;
+    --green: #4caf50;
+    --black: #000;
+    --white: #fff;
+    --blue-400: #7a7aff;
+    --green-300: #94f2c8;
+    --red-200: #f9a09a94;
+    --red-300: #fa85a2;
+    --gray-200: #eeeef5;
+    --gray-300: #e8e5ef;
+
+    --dark-shadow-default: 0 2px 4px rgba(0, 0, 0, .12), 0 2px 3px rgba(0, 0, 0, .24);
+    --dark-shadow-button: 0 2px 4px rgba(76, 175, 80, .12), 0 2px 3px rgba(76, 175, 80, .24);
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", SourceSansPro, SolaimanLipi;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s time;
+    -o-transition: 1s time;
+    transition: 1s time;
+}
+
+html {
+    background-color: var(--gray-200);
+    box-sizing: border-box;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    height: auto;
+
+    color: var(--black);
+    font-family: var(--font-family-sans-serif);
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.application {
+    width: 850px;
+
+    margin-top: 1rem;
+    padding: 2.5rem 3rem !important;
+
+    line-height: 1.5;
+
+    background-color: var(--white);
+    border-radius: .7rem;
+
+    -webkit-box-shadow: var(--dark-shadow-default);
+    -moz-box-shadow: var(--dark-shadow-default);
+    box-shadow: var(--dark-shadow-default);
+}
+
+.application-content-title {
+    color: var(--blue-400);
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    margin-bottom: 20px;
+    text-transform: capitalize
+}
+
+.message {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .05);
+    border-left: 4px solid var(--red-300);
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 24px;
+
+    display: none;
+    /*display: flex;*/
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+
+    -webkit-box-shadow: var(--dark-shadow-default);
+    -moz-box-shadow: var(--dark-shadow-default);
+    box-shadow: var(--dark-shadow-default);
+}
+
+.message .content {
+    padding: 1rem 0 1rem 1rem;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message .close {
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    color: var(--red);
+   /* border: 1px solid;*/
+    padding: 8px 8px 8px 8px;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message .close:hover {
+    cursor: pointer;
+}
+
+.error {
+    background-color: var(--red-300);
+    border-left: 4px solid var(--red);
+    color: var(--white);
+}
+
+.success {
+    background-color: var(--green-300);
+    border-left: 4px solid var(--green);
+    color: var(--green);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+
+    -webkit-box-shadow: var(--dark-shadow-default);
+    -moz-box-shadow: var(--dark-shadow-default);
+    box-shadow: var(--dark-shadow-default);
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    margin-right: 40px;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+form label:last-child {
+    margin-left: 0;
+}
+
+form input[type=text]{
+    font-family: inherit;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+form input[type=submit] {
+    width: 140px;
+
+    margin-top: 20px;
+    padding: 5px 15px;
+
+    font-family: inherit;
+    font-size: 18px;
+
+    color: var(--white);
+    background: var(--blue-deep-light);
+
+    cursor: pointer;
+
+    border: none;
+
+    -webkit-box-shadow: var(--dark-shadow-button);
+    -moz-box-shadow: var(--dark-shadow-button);
+    box-shadow: var(--dark-shadow-button);
+}
+
+form input[type=submit]:hover {
+    background: var(--blue-deep);
+}
+
+
+button[id=edit] {
+    margin: 10px;
+    padding: 5px 15px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    color: var(--black);
+    background: #E7E7E780;
+
+    cursor: pointer;
+
+    border: none;
+
+    -webkit-box-shadow: var(--dark-shadow-button);
+    -moz-box-shadow: var(--dark-shadow-button);
+    box-shadow: var(--dark-shadow-button);
+}
+
+
+button[id=edit]:hover {
+    background: #e7e7e7;
+}
+
+
+
+button[id=delete] {
+    margin: 10px;
+    padding: 5px 15px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    color: var(--white);
+    background: var(--red-200);
+
+    cursor: pointer;
+
+    border: none;
+
+    -webkit-box-shadow: var(--dark-shadow-button);
+    -moz-box-shadow: var(--dark-shadow-button);
+    box-shadow: var(--dark-shadow-button);
+}
+button[id=delete]:hover {
+    background: var(--red);
+}
+
+table {
+    border-collapse: collapse;
+    display: table;
+    height: auto;
+    text-align: left;
+    width: 100%;
+
+    line-height: 28px;
+
+    -webkit-box-shadow: var(--dark-shadow-default);
+    -moz-box-shadow: var(--dark-shadow-default);
+    box-shadow: var(--dark-shadow-default);
+}
+
+table thead {
+    font-weight: bold;
+    background: var(--gray-300);
+}
+
+table tr td {
+    border-bottom: .1rem solid var(--gray-300);
+    padding: .5rem 1rem
+}
+
+table tr td:last-child {
+    text-align: center;
+    width: 175px;
+}
