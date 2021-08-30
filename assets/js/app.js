@@ -5,6 +5,18 @@ class Book {
         this.isbn = isbn
     }
 }
+//
+// class IndexDB {
+//     constructor() {
+//     }
+//
+//     makeConnection(){}
+//     get(){}
+//     add(){}
+//     update(){}
+//     delete(){}
+//
+// }
 
 class App {
     constructor() {
